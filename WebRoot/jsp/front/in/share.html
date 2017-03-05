@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no">
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Expires" CONTENT="-1">
+<title>丰田双擎STATION&试驾会</title>
+<meta name="keywords" content="丰田,toyota,丰田汽车,丰田汽车(中国)投资有限公司,汽车" />
+<meta name="description" content="丰田的企业讯息,产品以及技术,环境和社会活动等企业报道的官方网站。" />
+<link type="text/css" rel="stylesheet" href="/css/front/in/basic.css">
+<script type="text/javascript" src="http://front.01event.com/cdn/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?b91364be83589069107cb9f366bd4170";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body style="background:#1A1819;">
+<div class="codeWrap">
+	<div class="codeMain">
+		<span class="codeNum"></span>
+	</div>
+</div>
+<!--share-->
+<div class="shareMask" style="display:block;">
+	<div class="content">
+		<i class="shareIocn"></i>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+
+	var urlCode = getQueryString("conversionCode");
+	
+	var basePath = 'http://toyota2016.adtmr.com/jsp/front/before/mobile/index.html'; //官网地址
+
+	if(!urlCode){
+		//返回首页
+		window.location.href = basePath;
+		return false;
+	}
+
+	urlCode = fillZero(urlCode, 4); //补零
+
+	$('.codeNum').html(urlCode);
+
+	ajaxGetWeiXinConf();//微信分享
+	
+	
+	//分享弹出层点击隐藏
+	$('.shareMask').click(function(){
+		$(this).hide();
+	})
+
+
+	/**
+	* 获取url的字符串
+	* name
+	 */
+	 function getQueryString(name) {
+	    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+	    var r = window.location.search.substr(1).match(reg);
+	    if (r != null) return unescape(r[2]); return null;
+	}
+
+	/**
+	 * 个位数时补零
+	 * @param  {[type]} num [description]
+	 * @return {[type]} digit [description]
+	 */
+	function fillZero(num, digit)
+	{
+		var str=''+num;
+	 
+		while(str.length<digit)
+		{
+			str='0'+str;
+		}
+		return str;
+	}
+
+
+    /**
+     * 获取微信配置
+     */
+    function ajaxGetWeiXinConf()
+    {
+        $.ajax({
+            url: 'http://app.slpuzi.com/weixin/getConfig',
+            data: {
+                url : location.href.split('#')[0],
+                type : 'share',
+                key : 'uwin'
+            },
+            async: false,
+            type: "post",
+            dataType: "jsonp",
+            success:function(jsonData){
+
+                if(jsonData.state == "0")
+                {
+                    initWeiXin(jsonData.data);
+                }
+            },
+            error:function(){topTip("操作失败, 请稍候再试！");}
+        });
+    }
+
+    /**
+     * 初始化微信
+     * @param data
+     */
+    function initWeiXin(data)
+    {
+        wx.config({
+            debug: false,
+            appId: data.appid,
+            timestamp: data.timestamp,
+            nonceStr: data.noceStr,
+            signature: data.signature,
+            jsApiList: [
+                'checkJsApi',
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage',
+                'onMenuShareQQ',
+                'onMenuShareWeibo'
+            ]
+        });
+
+        wx.ready(function() {
+            // 微信分享的数据
+            var wxData = {
+                imgUrl : "http://toyota2016.adtmr.com/images/front/in/share.jpg",
+                link : basePath,
+                desc : "集齐全套印章，我发现了一个了不起的秘密…… ", //描述
+                title : "丰田双擎STATION&试驾会",//大标题
+                trigger: function (res) {
+                    //alert('用户点击发送给朋友');
+                },
+                complete: function (res) {
+                    //alert(JSON.stringify(res));
+                },
+                success: function (res) {
+                    //location.href = "buy.html";
+                	_hmt.push(['_trackEvent', "试驾会code码_微信分享", 'click', '丰田双擎STATION&试驾会']);
+                },
+                cancel: function (res) {
+                    //alert('已取消');
+                },
+                fail: function (res) {
+                    //alert(JSON.stringify(res));
+                }
+            };
+            
+            //“分享给朋友”，按钮点击、自定义分享内容及分享结果接口
+            wx.onMenuShareAppMessage(wxData);
+            //“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
+            wx.onMenuShareTimeline(wxData);
+            //监听“分享到QQ”按钮点击、自定义分享内容及分享结果接口
+            wx.onMenuShareQQ(wxData);
+            //“分享到微博”按钮点击、自定义分享内容及分享结果接口
+            wx.onMenuShareWeibo(wxData);
+        });
+    }
+
+
+})
+</script>
+</body>
+</html>

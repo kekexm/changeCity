@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Expires" CONTENT="-1">
+<title>404</title>
+<link type="text/css" rel="stylesheet" href="/common/css/error.css" />
+<script type="text/javascript">
+	var phoneWidth =  parseInt(window.screen.width);
+	var phoneScale = phoneWidth/640;
+	var ua = navigator.userAgent;
+	if (/Android (\d+\.\d+)/.test(ua)){
+		var version = parseFloat(RegExp.$1);
+		if(version>2.3){
+			document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+		}else{
+			document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+		}
+	} else {
+		document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	};
+	
+	function back_index(){
+		location.href = "http://" + location.host;
+	}
+</script>
+</head>
+<body>
+<div class="wrapError">
+	<div class="wrap404Cen">
+		<div class="prompt">
+			<img src="/common/images/404.png" />
+		</div>
+		<div class="promptBtn">
+			<a href="javascript:;" onclick="back_index();" class="backPre">返回首页</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+﻿@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+html{color:#333333; overflow:-moz-scrollbars-vertical ; font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:none}
+body,button,input,select,textarea{font: 14px/1.667 "Microsoft Yahei", "Helvetica Neue","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif; word-break:break-all;}
+h1,h2,h3,h4,h5,h6{font-size:100%; font-weight:normal;}
+em, i{font-style:normal}
+ul,ol{list-style:none}
+a{text-decoration:none; outline:none; color:#333333; -webkit-tap-highlight-color:rgba(255,255,255,0);}
+a:hover{text-decoration:none;}
+legend{color:#000}
+fieldset,img{border:0}
+button,input,select,textarea{font-size:100%; border:none 0; outline:none; -webkit-appearance: none;}
+table{border-collapse:collapse;border-spacing:0;}
+th, td{text-align: left;}
+img{-ms-interpolation-mode:bicubic; vertical-align:top; border:0}
+textarea{resize:vertical; resize:none;}
+input:focus,textarea:focus{ outline:none;}
+input:-moz-placeholder , textarea:-moz-placeholder , select:-moz-placeholder{ color:#FFFCDA;}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder , select:-ms-input-placeholder{ color:#FFFCDA;}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder , select::-webkit-input-placeholder{ color:#FFFCDA;}
+.clearfix:after{content:"";display:block;clear:both}.clearfix{zoom:1}
+
+body{
+	background: url(/images/front/in/bgLine.jpg) center top repeat;
+}
+.wrap{
+	width: 640px;
+	margin: 0 auto;
+}
+.main{
+	padding: 30px 0 25px;
+}
+h3.title{
+	text-align: center;
+}
+h3.title i{
+	display: inline-block;
+	width: 191px;
+	height: 42px;
+	background: url(/images/front/in/icon.png) 0 0 no-repeat;
+	text-indent: -9999px;
+}
+ul.registerBox{
+	padding-top: 20px;
+}
+ul.registerBox li{
+	margin-bottom: 8px;
+}
+ul.registerBox input.text{
+	width: 469px;
+	height: 59px;
+	line-height: 59px;
+	display: block;
+	margin: 0 auto;
+	padding: 20px 40px;
+	background: url(/images/front/in/icon.png) -290px 0 no-repeat;
+	color: #FFFCDA;
+	font-size: 24px;
+}
+ul.registerBox select.text{
+	width: 549px;
+	height: 99px;
+	display: block;
+	margin: 0 auto;
+	padding: 20px 40px;
+	background: url(/images/front/in/icon.png) -290px 0 no-repeat;
+	color: #FFFCDA;
+	font-size: 24px;
+}
+.submitBtn{
+	margin-top: 35px;
+	text-align: center;
+}
+.submitBtn a{
+	display: inline-block;
+	width: 290px;
+	height: 57px;
+	background: url(/images/front/in/icon.png) 0 -43px no-repeat;
+	text-indent: -9999px;
+}
+/*集标*/
+.getChaper{
+	width: 640px;
+	margin: 0 auto;
+}
+h3.chapTitle{
+	text-align: center;
+	padding: 70px 0;
+}
+h3.chapTitle i{
+	display: inline-block;
+	width: 640px;
+	height: 148px;
+	background: url(/images/front/in/icon.png) 0 -99px no-repeat;
+	text-indent: -9999px;
+}
+h3.chapTitle.active i{
+	background-position: 0 -247px;
+}
+.chaperList{
+	display: block;
+	width: 541px;
+	height: 594px;
+	background: url(/images/front/in/chaperListBg.png) 0 0 no-repeat;
+	margin: 0 auto;
+	position: relative;
+}
+.chaperList li{
+	position: absolute;
+}
+.chaperList li.list_1{
+	left: 0px;
+	top: 0px;
+}
+.chaperList li.list_2{
+	left: 270px;
+	top: 1px;
+}
+.chaperList li.list_3{
+	left: 2px;
+	top: 257px;
+}
+.chaperList li.list_4{
+	left: 234px;
+	top: 260px;
+}
+
+
+/*分享图层*/
+.shareMask{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(0,0,0,.5);
+	display: none;
+}
+.shareMask .content{
+	width: 640px;
+	margin: 0 auto;
+	text-align: right;
+	padding-top: 5px;
+}
+.shareMask .content i.shareIocn{
+	display: inline-block;
+	width: 297px;
+	height: 234px;
+	background: url(/images/front/in/icon.png) -641px -99px no-repeat;
+}
+
+/*获奖页面*/
+.codeWrap{
+	width: 640px;
+	height: 1032px;
+	margin: 0 auto;
+	background: url(/images/front/in/shareCodeBg.jpg) center top no-repeat;
+}
+.codeWrap .codeMain{
+	padding-top: 465px;
+}
+.codeWrap .codeMain span{
+	width:370px;
+	height:150px;
+	line-height:150px;
+	font-size: 72px;
+	font-family: '黑体';
+	font-style: italic;
+	font-weight: bold;
+	color: #FFFCDA;
+	text-align: center;
+	display:block;
+	margin:0 auto;
+}
+
+
+

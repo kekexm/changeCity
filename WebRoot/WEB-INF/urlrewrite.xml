@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+        
+<urlrewrite>
+<!-- 示例 -->
+<!--
+	数据存储
+	<rule>
+		<from>^/datastore/([a-zA-Z0-9]+).htm</from> 
+        <to>/dataproject/$1</to>
+	</rule>
+	<rule>
+		<from>^/datastore/([0-9]+)/([a-zA-Z]+).htm</from> 
+        <to>/dataproject/$2?projectid=$1</to>
+	</rule>
+	<rule>
+        <from>^/datastore/([a-zA-Z]+)/([0-9]+).htm</from> 
+        <to>/dataproject/$1?projectid=$2</to>
+    </rule>
+	<rule>
+		<from>^/datastore/([a-zA-Z0-9]+)/save.htm</from> 
+        <to>/dataproject/save?code=$1</to>
+	</rule>
+	<rule>
+		<from>^/datastore/([a-zA-Z0-9]+)/dataCount.htm</from> 
+        <to>/dataproject/getDataCount?code=$1</to>
+	</rule> -->
+</urlrewrite>

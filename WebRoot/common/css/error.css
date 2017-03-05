@@ -1,0 +1,24 @@
+﻿/*初始化*/
+@charset "utf-8";body,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,p,form,input,button{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}h2{font-size:14px}ul,ol li{list-style:none}body{font-size:12px;margin:0 auto;color:#6c6c6c;font-family:Microsoft YaHei,Helvetica;background:#C4C4C4;-webkit-text-size-adjust:none}fieldset,img{border:0}img{vertical-align:top}input,textarea{border:none 0}a{text-decoration:none;color:#666}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:none}.clearfix:after{content:"";display:block;clear:both}.clearfix{zoom:1}
+input{ outline: none;}
+
+.wrapError{ width: 100%;}
+.wrap404Cen{ width: 100%; padding: 240px 0 100px;}
+.wrap404Cen .prompt{ text-align: center;}
+.wrap404Cen .promptBtn{ text-align: center;}
+.wrap404Cen .promptBtn a{ display: inline-block; width: 170px; height: 40px; line-height: 40px; background: #00B5EB; color: #FFFFFF; font-size: 17px; font-family: '方正兰亭细黑简体'; border-radius: 5px;}
+
+.wrap500Cen{ overflow: hidden; text-align: center;  padding: 240px 0 100px; }
+.wrap500Cen .prompt{display: inline-block; height: 220px; vertical-align: middle;}
+.wrap500Cen .promptBtn{display: inline-block; height: 220px; vertical-align: middle; text-align: left;}
+.wrap500Cen .promptBtn h3{ height: 170px; width: 405px; background: url(../images/500TextPc.png) 0 0 no-repeat; text-indent: -9999px;}
+.wrap500Cen .promptBtn a{text-align: center; margin-left: 18px; display: inline-block; width: 170px; height: 40px; line-height: 40px; background: #00B5EB; color: #FFFFFF; font-size: 17px; font-family: '方正兰亭细黑简体'; border-radius: 5px;}
+
+@media screen and (max-width: 700px){
+.wrap404Cen .promptBtn{ margin-top: 30px;}
+.wrap404Cen .promptBtn a{ height: 55px; line-height: 55px; font-size: 27px; width: 250px;}
+
+.wrap500Cen .prompt{display: block; height: 220px;}
+.wrap500Cen .promptBtn h3{background: url(../images/500TextMobile.png) 0 0 no-repeat; height: 236px; width: 640px;}
+.wrap500Cen .promptBtn a{margin:0 auto; display: block; height: 55px; line-height: 55px; font-size: 27px; width: 250px;}
+}

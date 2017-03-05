@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no">
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Expires" CONTENT="-1">
+<title>丰田双擎STATION&试驾会</title>
+<link type="text/css" rel="stylesheet" href="/css/front/after/basic.css">
+<link rel="shortcut icon" href=""/>
+<meta name="keywords" content="丰田,toyota,丰田汽车,丰田汽车(中国)投资有限公司,汽车" />
+<meta name="description" content="丰田的企业讯息,产品以及技术,环境和社会活动等企业报道的官方网站。" />
+<script type="text/javascript" src="http://front.01event.com/cdn/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="/js/front/after/jquery.loadscript.js"></script>
+<script type="text/javascript" src="/js/front/after/jquery.uploadAdapter.js"></script>
+<script type="text/javascript" src="/js/front/after/background.js"></script>
+<script type="text/javascript" src="/js/front/after/main.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?b91364be83589069107cb9f366bd4170";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="text/javascript">
+var url = 'http://toyota2016.adtmr.com/jsp/front/after/index.html';
+
+//var url = 'http://test.uwin.cc/index.html';
+var userId = 'yoyota20161111';
+
+
+var oauth_data = getQueryString("oauth_data");
+if(!!oauth_data){
+
+    oauth_data = decodeURIComponent(oauth_data);
+
+    var rr = eval("(" + oauth_data + ")");
+    localStorage.setItem('TOYOTAWXOPENID',rr.userInfo.openid);//微信openid
+    localStorage.setItem('TOYOTAWXNICKNAME',rr.userInfo.nickname);//微信昵称
+    localStorage.setItem('TOYOTAWXHEADIMG',rr.userInfo.headimgurl);//微信头像
+}
+
+var hasToyotaOpenId = localStorage.getItem('TOYOTAWXOPENID');//防止重复认证
+
+if(!hasToyotaOpenId){
+	
+	var obj = {
+        url : url,
+        key : "ca58f4a92ae2b38249f070ec8e7741ce",
+        userId : userId
+    }
+    window.location.href = "http://static.01event.com/weixin/oauth?key=ca58f4a92ae2b38249f070ec8e7741ce&data=" +JSON.stringify(obj);
+}
+
+/** 获取URL参数 */  
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
+
+</script>
+</head>
+<body>
+<div class="wrap">
+	<div class="title"><img src="/images/front/after/title.png"></div>
+	<div class="content">
+		<div class="textAreaMain">
+			<textarea placeholder="分享新鲜事……" id="speakText" maxlength="140"></textarea>
+		</div>
+		<div class="uploadImgBox clearfix">
+			<ul class="imgList clearfix">
+				<li>
+					<div class="posirela">
+						<div class="uploadBox" fileRootDomSelect=".uploadBox">
+							<div class="upLoad">
+								<div class="upLoadImg" title="上传图片"></div>
+								<input type="hidden" urls value="">
+								<!-- 
+								<div id="file_upload_1-queue" class="uploadify-queue"><div id="fileupload_1_1" class="uploadify-queue-item" style="/* display: none; */"><div class="uploadify-progress"><div class="uploadify-progress-bar" style="width: 100%;"></div></div><span class="up_percent">100%</span><span class="progressnum"><span class="uploadedsize">10.47KB</span>/<span class="totalsize">10.47KB</span></span></div></div>
+								 -->
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="sendMesBtn"><a href="javascript:void(0);">发送</a></div>
+	</div>
+	<div class="readCopyRightBtn"><a href="javascript:void(0);">阅读“免责声明”</a></div>
+	<div class="agreeBtn"><a href="javascript:void(0);"><i></i>我同意（免责声明）</a></div>
+</div>
+<!--声明-->
+<div class="statement" style="display:none;">
+	<div class="statementMain">
+		<div class="statementCenter">
+			<a href="javascript:void(0);" class="closeBtn">关闭</a>
+			<a href="javascript:void(0);" class="IamAgreeBtn">我同意</a>
+			<div class="stateTxt">
+				<img src="/images/front/after/statementTxt.png" />
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="forClone" style="display:none;">
+	<li>
+		<div class="posirela">
+			<div class="uploadBox" fileRootDomSelect=".uploadBox">
+				<div class="upLoad">
+					<div class="upLoadImg" title="上传图片"></div>
+					<input type="hidden" urls value="">
+				</div>
+			</div>
+		</div>
+	</li>
+</div>
+
+<!--share-->
+<div class="shareMask">
+	<div class="contentMask">
+		<div><img src="/images/front/after/shareMaskImg.png" /></div>
+		<div class="closeBtn"><a href="javascript:void(0);">关闭</a></div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+﻿@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+html{color:#333333; overflow:-moz-scrollbars-vertical ; font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:none}
+body,button,input,select,textarea{font: 14px/1.667 "Microsoft Yahei", "Helvetica Neue","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif; word-break:break-all;}
+h1,h2,h3,h4,h5,h6{font-size:100%; font-weight:normal;}
+em, i{font-style:normal}
+ul,ol{list-style:none}
+a{text-decoration:none; outline:none; color:#333333; -webkit-tap-highlight-color:rgba(255,255,255,0);}
+a:hover{text-decoration:none;}
+legend{color:#000}
+fieldset,img{border:0}
+button,input,select,textarea{font-size:100%; border:none 0; outline:none; -webkit-appearance: none;}
+table{border-collapse:collapse;border-spacing:0;}
+th, td{text-align: left;}
+img{-ms-interpolation-mode:bicubic; vertical-align:top; border:0}
+textarea{resize:vertical; resize:none;}
+input:focus,textarea:focus{ outline:none;}
+input:-moz-placeholder , textarea:-moz-placeholder , select:-moz-placeholder{ color:#FFFCDA;}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder , select:-ms-input-placeholder{ color:#FFFCDA;}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder , select::-webkit-input-placeholder{ color:#FFFCDA;}
+.clearfix:after{content:"";display:block;clear:both}.clearfix{zoom:1}
+
+body{
+	background:#000 url(/images/front/after/bg.jpg) center bottom no-repeat;
+}
+.wrap{
+	padding: 10px 0 260px;
+	margin: 0 auto;
+}
+.title{
+	text-align: center;
+}
+.content{
+	width: 535px;
+	height: 485px;
+	margin: 0 auto;
+	background: url(/images/front/after/speakBg.png) 0 0 no-repeat;
+	padding: 35px 24px 0 18px;
+}
+.textAreaMain textarea{
+	width: 100%;
+	height: 260px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	background: none;
+	font-size: 24px;
+	color: #FBE7C8;
+	line-height: 40px;
+	-webkit-overflow-scrolling: touch; 
+}
+.uploadImgBox{
+	padding-top: 25px;
+}
+ul.imgList{
+	display: inline;
+	float: left;
+}
+.imgList li{
+	display: inline;
+	float: left;
+	margin-right: 15px;
+	width: 110px;
+	height: 110px;
+}
+.imgList li img{
+	width:100%;
+	max-height:100%;
+}
+.imgList .upLoadImg{
+	width: 110px;
+	height: 110px;
+	background: url(/images/front/after/icon.png) 0 -52px no-repeat;
+}
+.sendMesBtn{
+	padding: 20px 0 0 325px;
+}
+.sendMesBtn a{
+	display: block;
+	width: 219px;
+	height: 46px;
+	background: url(/images/front/after/icon.png) 0 0 no-repeat;
+	text-indent: -9999px;
+}
+.readCopyRightBtn{
+	margin-top: 25px;
+	text-align: center;
+}
+.readCopyRightBtn a{
+	display: inline-block;
+	width: 389px;
+	height: 52px;
+	background: url(/images/front/after/icon.png) -219px 0 no-repeat;
+	text-indent: -9999px;
+}
+.agreeBtn{
+	text-align: center;
+	margin-top: 25px;
+}
+.agreeBtn a{
+	display: inline-block;
+	font-size: 22px;
+	color: #FFFCDA;
+}
+.agreeBtn a i{
+	display: inline-block;
+	width: 37px;
+	height: 37px;
+	background: url(/images/front/after/icon.png) -153px -52px no-repeat;
+	margin-right: 14px;
+	vertical-align: bottom;
+}
+.agreeBtn a.active i{
+	background-position:  -116px -52px;
+}
+.statement{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	z-index: 1;
+}
+.statementMain{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-top: -406px;
+	margin-left: -245px;
+}
+.statementCenter{
+	width: 490px;
+	height: 812px;
+	background: url(/images/front/after/statement.png) 0 0 no-repeat;
+	position: relative;
+}
+.statementCenter a.closeBtn{
+	position: absolute;
+	right: 16px;
+	top: 20px;
+	display: block;
+	width: 50px;
+	height: 50px;
+	text-indent: -9999px;
+}
+.statementCenter a.IamAgreeBtn{
+	position: absolute;
+	left: 109px;
+	top: 691px;
+	display: block;
+	width: 275px;
+	height: 58px;
+	text-indent: -9999px;
+}
+.statementCenter .stateTxt{
+	position:absolute;
+	width:410px;
+	top:110px;
+	left:42px;
+	height:540px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	
+}
+
+
+/*分享图层*/
+.shareMask{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(0,0,0,.9);
+	display: none;
+}
+.shareMask .contentMask{
+	width: 640px;
+	margin: 0 auto;
+	text-align: right;
+	padding-top: 5px;
+}
+
+
+.uploadify-progress{
+	display:block !important;
+	width:100% !important;
+	height:6px !important;
+	border-radius:6px !important;
+	
+}
+.uploadify-progress-bar{
+	background:#008CD9 !important;
+}
+
+
+/*上传注销*/
+.up_percent , .progressnum{
+	display:none;
+}
+
+/*关闭按钮*/
+.closeBtn{
+	text-align:center;
+	padding-top:180px;
+}
+.closeBtn a{
+	display:inline-block;
+	width:219px;
+	height:46px;
+	text-indent:-9999px;
+	background:url(/images/front/after/icon.png) -295px -84px no-repeat;
+}
+
+
+

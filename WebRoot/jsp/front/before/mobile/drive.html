@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no">
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Expires" CONTENT="-1">
+<title>丰田双擎STATION&试驾会</title>
+<meta name="keywords" content="丰田,toyota,丰田汽车,丰田汽车(中国)投资有限公司,汽车" />
+<meta name="description" content="丰田的企业讯息,产品以及技术,环境和社会活动等企业报道的官方网站。" />
+<link rel="stylesheet" href="/css/front/before/mobile.css?v=3.0">
+<link rel="shortcut icon" href=""/>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?b91364be83589069107cb9f366bd4170";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="text/javascript">
+if(isPC()){
+	window.location.href = '../pc/drive.html'
+}
+function isPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+</script>
+</head>
+<body class="bg">
+	<div class="main-test">
+		<!-- 头部 -->
+		<div class="header">
+			<img src="/images/front/before/mobile/header.jpg" alt="">
+		</div>
+		<div class="banner">
+			<div class="ban-order">
+			</div>
+		</div>
+		<!-- 试驾预约 -->
+		<div class="test-container">
+			<h1 class="test-title little-title  textCen">丰田双擎试驾预约</h1>
+			<div class="test-name test-input">
+				<input type="text" placeholder="姓名" id="name">
+			</div>
+			
+			<div class="test-male clearfix">
+				<a href="javascript:void(0)" value="男" class="active">先生</a>
+				<a href="javascript:void(0)" value="女">女士</a>
+			</div>	
+			<div class="test-tel test-input">
+				<input type="text" placeholder="手机号码" maxlength="11" id="phone">
+			</div>
+			<div class="test-send sendBtn">
+				<a href="javascript:void(0)" class="aDis pub_pic codeBtn">
+					<img src="/images/front/before/mobile/test-send.png" alt="">
+				</a>
+			</div>
+			<div class="test-yzm test-input test-mar">
+				<input type="text" placeholder="验证码" id="code" maxlength="6">
+			</div>
+		</div>
+		<!-- 点击验证-->
+		<div class="test-order testorderBtn">
+			<div class="container textCen">
+				<a href="javascript:void(0)" class="aDis test-orderBtn"><img src="/images/front/before/mobile/test-aniu.png" alt=""></a>
+			</div>
+		</div>
+		<div class="test-container2">
+			<div class="city">
+				<h1>城市</h1>
+			</div>
+			<div class="clearfix sub-city" id="allCity">
+				<a href="javascript:void(0)" myId="0" class="sel"></a>
+				<a href="javascript:void(0)" myId="1"></a>
+			</div>		
+			<div class="city sub-marTop cityAddTime">
+				<h2 class="small">地点：青岛市长江路211号美罗区<br>时间：2016年11月5日   09:00-18:00</h2>
+				<h2 class="small">地点：杭州市黄河路211号美罗区<br>时间：2016年12月7日   09:00-18:00</h2>
+			</div>
+			<!-- 选择日期 -->
+			<div class="city sub-marTop2">
+				<h1>试驾日期</h1>
+			</div>
+			<div id="truTime" class="clearfix">
+				<!--  <a href="javascript:void(0)" class="sub-time aDis fl" value="2016-11-05">
+				11月5日（周六）
+				</a>-->
+			</div>
+			<div class="city">
+				<h1>试驾时间</h1>
+			</div>
+			<ul class="clearfix" id="timeList">
+			</ul>
+			<!-- 如何获得信息 -->
+			<div class="yy sub-border2">
+				<h1>您是如何获得预约试驾信息？</h1>
+			</div>
+			<div class="test-input test-sel">
+				
+				<select name="" id="subDes">
+					<option value="" disabled = "true" selected="true" class="disa">请选择</option>	
+					<option value="丰田中国官网">丰田中国官网</option>
+					<option value="丰田中国活动网站">丰田中国活动网站</option>
+					<option value="丰田中国官方微信">丰田中国官方微信</option>
+					<option value="丰田中国官方微博">丰田中国官方微博</option>
+					<option value="一汽丰田官网">一汽丰田官网</option>
+					<option value="一汽丰田经销店宣传物">一汽丰田经销店宣传物</option>
+					<option value="一汽丰田官方微信">一汽丰田官方微信</option>
+					<option value="一汽丰田官方微博">一汽丰田官方微博</option>
+					<option value="广汽丰田官网">广汽丰田官网</option>
+					<option value="广汽丰田经销店宣传物">广汽丰田经销店宣传物</option>
+					<option value="广汽丰田官方微信">广汽丰田官方微信</option>
+					<option value="广汽丰田官方微博">广汽丰田官方微博</option>
+					<option value="爱卡汽车网站（含网站、微博、微信）">爱卡汽车网站（含网站、微博、微信）</option>
+					<option value="本地报纸（含报纸、微博、微信）">本地报纸（含报纸、微博、微信）</option>
+					<option value="本地新闻网（含网站、微博、微信）">本地新闻网（含网站、微博、微信）</option>
+					<option value="本地生活类公众号（含微博、微信）">本地生活类公众号（含微博、微信）</option>
+					<option value="本地广播">本地广播</option>
+					<option value="YOHO（含网站、微博、微信、APP）">YOHO（含网站、微博、微信、APP）</option>
+					<option value="朋友口碑">朋友口碑</option>
+				</select>
+				<input type="text" placeholder="请选择">
+			</div>
+			<div class="sub-if">
+				<h1><a href="javascript:void(0)" class="aDis"><i class="has"></i></a>我拥有驾照一年以上</h1>
+			</div>
+			<!-- 阅读协议 -->
+			<div class="test-send readMz">
+				<a href="javascript:void(0)" class="aDis pub_pic">
+					<img src="/images/front/before/mobile/sub-xy.png" alt="">
+				</a>
+			</div>
+			<div class="sub-if marTop">
+				<h1><a href="javascript:void(0)" class="aDis"><i class="has"></i></a>我同意（免责声明）</h1>
+			</div>
+			<div class="sub-if marTop sub-border3">
+				<h1>备注：同行人员如要试驾，请另行预约。</h1>
+			</div>
+			<!-- 点击提交-->
+			<div class="sub-order" style="margin-top:40px;">
+				<div class="container textCen">
+					<a href="javascript:void(0)" class="aDis test-subBtn"><img src="/images/front/before/mobile/sub-sub.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+		<div class="shadow2"></div>
+		<div class="index-stop pub_pic">
+			<img src="/images/front/before/pc/sub-yycg.png" alt="">
+			<div class="alertPic">
+				<p>请您凭手机号</p>
+				<p>于  <span class="successTime">  </span>  到</p>
+				<p><span class="successAdd"></span>  参加试驾</p>
+			</div>
+			<div class="enter pub_pic cenStop">
+				<a href="javascript:void(0)" class="aDis">
+					<img src="/images/front/before/pc/sub-true.png" alt="">
+				</a>
+			</div>
+		</div>
+		<div class="mzsm pub_pic">
+			<div class="mzsmwrap">
+				<img src="/images/front/before/mobile/mzsm.png" alt="">
+				<div class="enter pub_pic">
+					<a href="javascript:void(0)" class="aDis">
+						<img src="/images/front/before/mobile/mzsm-true.png" alt="">
+					</a>
+				</div>
+				<a href="javascript:void(0)" class="aDis">
+					<i class="closeBtn"></i>
+				</a>
+			</div>
+		</div>
+		<!-- 底部版权 -->
+		<div class="footer">
+			<p>Copyright © 2016 TOYOTA Corporation, All Rights Reserved <br>
+	丰田汽车 版权所有</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="http://front.01event.com/cdn/js/jquery.min.js"></script>
+	<script type="text/javascript" src="http://front.01event.com/cdn/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/front/before/mobile/cityValue.js?v=3.0"></script>
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/js/front/before/mobile/subMessage.js"></script>
+	<script>
+		$(function(){
+			
+			
+			//罗列所有的城市
+			if($.cookie('cityIndex')==null){
+				window.location.href = 'index.html';
+			}
+			var cookieIndex = parseInt($.cookie('cityIndex')); //cookie值城市id
+			//console.log($.cookie('cityIndex')==null);
+			var creatCityAbtnStr = '';
+			var cityTimeAndAddress = '';//用于默认城市
+			
+			creatCityAbtnStr += '<a href="javascript:void(0)" class="sel" myid="' + allCityVal[cookieIndex].cityId + '" value="' + allCityVal[cookieIndex].nameVal + '">' + allCityVal[cookieIndex].nameVal + '</a>';
+			//cityTimeAndAddress = '<h2>' + allCityVal[cookieIndex].addressVal +'（'+ allCityVal[cookieIndex].addressVal2 + '）'+'<br>' +  allCityVal[cookieIndex].timeText + '</h2>';
+			cityTimeAndAddress = '<h2>' + allCityVal[cookieIndex].addressVal + allCityVal[cookieIndex].addressVal2+'<br>' +  allCityVal[cookieIndex].timeText + '</h2>';
+			
+			$('#allCity').html(creatCityAbtnStr);//添加全部城市
+			$('.cityAddTime').html(cityTimeAndAddress);//添加城市地点和时间
+			
+			changeCitysTime(cookieIndex+1);//默认请求后台一次
+			
+			/*城市试驾时间
+			* @param 城市id
+			*/
+			function changeCitysTime(numId){
+				var numId = parseInt(numId);
+				if(!numId){
+					return false;
+				}
+				$.ajax({
+					url:'http://toyota2016.adtmr.com/testdrive/gettimeslice',
+					type:'post',
+					dataType:'jsonp',
+					data:{'id' : numId},
+					success:function(data){
+					//	console.log(data);
+						if(data.state != '0'){
+							alert(data.message);
+							return false;
+						}else{
+							addTimeMessage(data.data)
+						}
+
+					},
+					error:function(){
+						alert('系统繁忙，请稍后再试！');
+					}
+				});
+			}
+			
+			//添加时间信息
+			function addTimeMessage(data){
+				$("#truTime").html('');//请求前先清空原来的数据
+				$('#timeList').html('');//请求前先清空原来的数据
+			//	console.log(data)
+				var newA = '';
+				$.each(data.days,function(index,value){
+					//console.log(value);
+					newA += '<a href="javascript:void(0)" class="sub-time aDis fl" newDayId='+index+' value='+value.day+'>'+value.day+'</a>';
+					var newTimeA = '';
+					$.each(value.hours,function(index,val){
+						if(val.isfull == true){
+							newTimeA +='<li href="javascript:void(0)" class="fl subTime"><a class="thisTimefull" href="javascript:void(0)" hour='+val.hour+' id='+val.id+' isFull='+val.isfull+' >'+'已满'+'</a></li>';
+						}
+						else{
+							newTimeA +='<li href="javascript:void(0)" class="fl subTime"><a href="javascript:void(0)" hour='+val.hour+' id='+val.id+' isFull='+val.isfull+' >'+val.hour+'</a></li>';
+						}
+					})
+					$(newTimeA).attr("newTimeId",index).appendTo('#timeList');
+				})
+				$(newA).appendTo("#truTime");
+
+				truTimeDis(0);//初始化是第一天默认选中  当天时间显示 其它的隐藏
+			}
+			
+			
+			
+			//某一天以及相应的时间点的切换
+			function truTimeDis(num){
+				$("#truTime a").removeClass('sele');
+				$("#truTime a").eq(num).addClass('sele');	
+				
+				var len = $("#timeList li").length;
+				
+				for(var i=0;i<len;i++){
+					var newTmId = parseInt($("#timeList li").eq(i).attr("newTimeId"));
+					if(newTmId == num){
+						$("#timeList li").eq(i).show();
+					}else{
+						$("#timeList li").eq(i).hide();
+					}
+				}
+			}
+			//某一天以及对应应的时间点的执行
+
+			$(document).on('click','#truTime a',function(){
+				$(this).addClass("sele");
+				$(this).siblings().removeClass("sele");
+				var selectId = $('a.sele').attr('newDayId');
+				selectId = parseInt(selectId);
+				truTimeDis(selectId);
+			})
+
+			//选则具体的时间点
+			$(document).on('click','.subTime',function(){
+				var isFull = $(this).find("a").attr("isFull");
+				console.log(isFull)
+				if(isFull=='true'){
+					alert('报名人数已满');
+					return false;
+				}
+				$(".subTime").removeClass("sel");
+				$(this).addClass("sel");
+			})
+		
+			//性别切换
+			
+			$('.test-male a').click(function(){
+				$('.test-male a').removeClass('active');
+				$(this).addClass('active');
+			});
+			
+			//关闭报名信息
+			
+			$(".cenStop").click(function(){
+				$(".index-stop").hide();
+				$(".shadow2").hide();
+			})
+			
+			//是否同意协议
+			
+			$('.sub-if i').click(function(){
+				if($(this).hasClass('has')){
+					$(this).removeClass('has');
+					$(this).addClass('none');
+				}else{
+					$(this).removeClass('none');
+					$(this).addClass('has');
+				}
+				iconShow();
+			});
+			
+			
+			//阅读协议
+			
+			$('.readMz').click(function(){
+				$('.shadow2').show();
+				$('.mzsm').show();
+			});
+			$('.readMz').click(function(){
+				$('.shadow2').show();
+				$('.mzsm').show();
+			});	
+			
+			//关闭协议
+			
+			$(".closeBtn,.mzsm .enter").click(function(){
+				$('.shadow2').hide();
+				$('.mzsm').hide();
+			});
+			
+
+			//点击发送验证码
+			
+			$('.codeBtn').click(function(){
+				var returnVal = submitMessage();
+				if(!returnVal){
+					return false;
+				}
+				$.ajax({
+					url:'http://toyota2016.adtmr.com/testdrive/send',
+					type:'post',
+					dataType:'jsonp',
+					data:{
+						'phone' : phone,
+						'key' : 'e755d28c2164986e92073d457936a133'
+					},
+					success:function(data){
+						if(data.state != '0'){
+							return false;
+						}
+						alert("发送成功！");
+						$(".sendBtn").hide();
+					},
+					error:function(){
+						alert('系统繁忙，请稍后再试！');
+					}
+				});
+			});
+			
+			//验证信息
+			
+			$('.test-orderBtn').click(function(){
+				
+				var returnVal = submitMessage();
+				if(!returnVal){
+					return false;
+				}
+				if(!codeVal){
+					alert('请核实验证码是否正确！');
+					return false;
+				}
+				$.ajax({
+					url:'http://toyota2016.adtmr.com/testdrive/check',
+					type:'post',
+					dataType:'jsonp',
+					data:{
+						'phone' : phone,
+						'key' : 'e755d28c2164986e92073d457936a133',
+						//'key' : '9twwAhpcQLQDN0POwmow11eP7g46MlrV',
+						'code' : codeVal
+					},
+					success:function(data){
+						
+						if(data.state != '0'){
+							alert(data.message)
+							return false;
+						}else{
+							alert('验证成功,请填写具体预约信息！')
+							$(".testorderBtn").hide();
+							$(".test-yzm").hide();
+							$(".test-container2").show();
+							
+							//锁定姓名手机号码不可更改
+							$('#name, #phone').attr('disabled','disabled');
+						}
+						console.log(data);		
+					},
+					error:function(){
+						alert('系统繁忙，请稍后再试！');
+					}
+				});
+			})
+			
+			
+			
+			//发送恭喜短信
+			function sayGood(){
+				console.log(phone)
+				$.ajax({
+					url:'http://toyota2016.adtmr.com/testdrive/send',
+					type:'post',
+					dataType:'jsonp',
+					data:{
+						'phone' : phone,
+						'key':'9twwAhpcQLQDN0POwmow11eP7g46MlrV'
+					},
+					success:function(data){
+						console.log(data);
+					},
+					error:function(){
+						console.log(data)
+					}
+				});
+			}
+			
+			//选则具体的时间
+			//$(document).on('click','.subTime',function(){
+			//	var isFull = $(this).find("a").attr("isFull");
+				//console.log(isFull)
+				//if(isFull=='true'){
+				//	alert('报名人数已满');
+					//return false;
+				//}
+				//$(".subTime").removeClass("sel");
+				//$(this).addClass("sel");
+			//})
+			
+			
+			iconShow();
+
+			//提交按钮现实隐藏
+			 function iconShow(){
+				 var num = 0;
+					for(var i=0;i<$('.sub-if i').length;i++){
+						if($('.sub-if i').eq(i).attr("class")!='has'){
+							$('.sub-order').css({"visibility":"hidden"});
+							return false;
+						}else{
+							num++;
+						}
+					};
+					//console.log(num);
+					if(num==$('.sub-if i').length){
+						$('.sub-order').css({"visibility":"visible"});
+					}
+			 };
+			
+			 
+			//最终的信息提交
+				$(".test-subBtn").click(function(){
+					testTime();
+				})
+				//selsect改变事件
+				$("#subDes").change(function(){
+					var subDesc = $.trim($("#subDes").val());
+					$(".test-sel input").val(subDesc);
+				})
+				
+				
+				//判断是否选择时间
+				function testTime(){
+					//var timeDay = $.trim($(".sub-time").attr("value"));
+					var yesTimeId =  $.trim($(".subTime.sel a").attr('id'));
+					//var timeVal =$.trim($(".sub-time").attr("value"))+' '+ $.trim($(".subTime.sel a").attr('value'));
+					var subDes = $.trim($("#subDes").val());
+					if(!yesTimeId){
+						alert('请选择时间');
+						return false;
+					}
+					if(!subDes){
+						alert('试驾信息不能为空');
+						return false;
+					}
+					submitLast();
+				}
+			
+				function  submitLast(){
+					var returnVal = submitMessage();
+					if(!returnVal){
+						return false;
+					}
+					$.ajax({
+						url:'http://toyota2016.adtmr.com/testdrive/order',
+						type:'post',
+						dataType:'jsonp',
+						data:{
+							'name' : name,
+							'sex' : maleVal,
+							'phone' : phone,
+							'id' :　yesTimeId,
+							'description' : subDes
+						},
+						success:function(data){
+							
+							if(data.state != '0'){
+								alert(data.message);
+								return false;
+							}else{
+								successPic();
+								$('.shadow2').show();
+								$('.index-stop').show();
+								sayGood();//发送恭喜短信
+							}
+							console.log(data);		
+						},
+						error:function(){
+							alert('系统繁忙，请稍后再试！');
+					}
+				})
+			}
+				//将选中的城市信息反应到提交成功的页面
+				function successPic(){
+					var succCity = $('.sub-city a.sel').text();
+					var timeTextDay = $("#truTime a.sele").text();
+					var timeTextHour = $("#timeList .sel a").text();
+					var timeText = timeTextDay+timeTextHour+'点';
+					$('.successTime').text(timeText);
+					$(".successAdd").text(succCity);
+				}
+			
+		})
+	</script>
+</body>
+</html>
